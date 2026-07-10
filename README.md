@@ -41,13 +41,13 @@ Next.js-first (the proven path), with enough conceptual grounding that Claude ad
 **Claude Code (as a personal skill):**
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USER/xai-voice-agent ~/.claude/skills/xai-voice-agent
+git clone https://github.com/spadev2015/xai-voice-agent ~/.claude/skills/xai-voice-agent
 ```
 
 **Or as a project skill** (shared with your team via the repo):
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USER/xai-voice-agent .claude/skills/xai-voice-agent
+git clone https://github.com/spadev2015/xai-voice-agent .claude/skills/xai-voice-agent
 ```
 
 **Or the packaged `.skill` file:** download `xai-voice-agent.skill` from [Releases](../../releases) and install it via your Claude client's skill installer.
