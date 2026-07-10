@@ -1,0 +1,26 @@
+{
+  "skill_name": "xai-voice-agent",
+  "evals": [
+    {
+      "id": 0,
+      "name": "core-nextjs-voice",
+      "prompt": "I have a Next.js 16 App Router app (TypeScript, React 19). Add a voice assistant using xAI's Grok realtime voice API so users can talk to it from the browser — click a button, speak, hear it answer. Assume auth is already handled (you can stub a getAuthenticatedUser() helper). Create all the files needed.",
+      "expected_output": "Token-mint route (POST api.x.ai/v1/realtime/client_secrets, server-side), client that opens wss://api.x.ai/v1/realtime with the token as subprotocol xai-client-secret.<token>, sends session.update first, streams PCM16@24kHz base64 mic audio, plays response audio gaplessly with barge-in.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "function-calling",
+      "prompt": "Build me a voice agent with xAI (Grok voice, the realtime WebSocket API) for my Next.js app that can call a function to book appointments when the caller asks for one. The booking should happen on my server, not in the browser. Stub the actual database write. Create all files needed.",
+      "expected_output": "Everything from the core path plus: tool definitions in session.update, buffering of response.function_call_arguments.done events, execution on response.done via an authed server route, a function_call_output for every call (failures become {error} outputs), then exactly one response.create.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "key-safety-token-arch",
+      "prompt": "How do I keep my xAI API key safe if the browser has to open the websocket to x.ai for their realtime voice API? I'm on Vercel with a Next.js app. Explain the approach and set it up for me.",
+      "expected_output": "Explains ephemeral tokens: server route mints via POST /v1/realtime/client_secrets with Authorization: Bearer XAI_API_KEY and short expiry, browser receives only the ephemeral token and passes it as WebSocket subprotocol; XAI_API_KEY stays server-only. Implements the token route.",
+      "files": []
+    }
+  ]
+}
