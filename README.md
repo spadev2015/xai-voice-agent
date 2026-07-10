@@ -2,7 +2,6 @@
 
 **Talk to your app.** This skill teaches Claude Code how to build a production-quality realtime voice agent on [xAI's Grok Voice API](https://console.x.ai) — browser microphone → speech-to-speech WebSocket → function calling → optional transcript persistence.
 
-> 🎬 *Demo GIF placeholder — a live call creating a booking by voice*
 
 ## Why this exists
 
