@@ -1,4 +1,4 @@
-# xai-voice-agent — a Claude Code skill
+# xai-voice-agent — a Claude Code skill built with Fable 5
 
 **Talk to your app.** This skill teaches Claude Code how to build a production-quality realtime voice agent on [xAI's Grok Voice API](https://console.x.ai) — browser microphone → speech-to-speech WebSocket → function calling → optional transcript persistence.
 
